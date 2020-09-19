@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./public/css/styles.css">
+        <link rel="stylesheet" href="./public/css/global.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1>BlockList</h1>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./public/pages/notes.html">Notas</a></li>
+                <li><a href="./public/pages/sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <main class="form-notes">
+            <div class="form-notes__counter">
+                <p>Notas
+                    <span data-notes="counter"></span>
+                </p>
+            </div>
+            <form class="form__container container" data-notes="form">
+                <div class="form-notes__actions first" >
+                    <label>Titúlo do nota</label>
+                    <input name="title" type="text" data-notes="title">
+                </div>
+                <div  class="form-notes__actions" >
+                    <label>Conteúdo da nota</label>
+                    <textarea name="content" type="text" data-notes="content"></textarea>
+                </div>
+                <div class="form-notes__options">
+                    <label>Prioridade da nota</label>
+                    <div>
+                        <label id="label-1" for="input-1">Urgente</label>
+                        <input data-notes="input" value="#AB47BC" id="input-1" type="checkbox">
+                    </div>
+                    <div>
+                        <label id="label-2" for="input-2">Importante</label>
+                        <input data-notes="input "id="input-2" value="#FF7043" type="checkbox">
+                        </div>
+                    <div>
+                        <label id="label-3" for="input-3">Menos importante</label>
+                        <input data-notes="input" id="input-3" value="#FFA726" type="checkbox">
+                    </div>
+                    <div>
+                        <label id="label-4" for="input-4">Lembrete</label>
+                        <input data-notes="input" id="input-4" value="#8BC34A" type="checkbox">
+                    </div>
+                    <div>
+                        <label id="label-5" for="input-5" >Realizar assim que possível</label>
+                        <input data-notes="input" id="input-5" type="checkbox" value="#00BCD4">
+                    </div>
+                </div>
+                <div>
+                    <button data-notes="button" class="form-notes__button" type="submit">Salvar nota</button>
+                    <span class="form-notes__alert" data-notes="alert">Item adicionado</span>
+                </div>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <div>
+                <p>Created by <a href="https://www.instagram.com/dksecurityofc?r=nametag">DK Security</a></p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/DKSecurity99">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCUKyY5rDaAGKdNKAd8XXbwQ">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/dksecurityofc?r=nametag">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="./src/index.js" type="module"></script>
+    </body>
+</html>

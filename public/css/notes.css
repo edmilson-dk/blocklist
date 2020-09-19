@@ -1,0 +1,113 @@
+@import url('./colors.css');
+@import url('./reset.css');
+
+.notes {
+    height: 100vh;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.notes h1 {
+    margin-left: 10px;
+    font-size: 3rem;
+    width: 20rem;
+    color: var(--color-text-label);
+    font-weight: 600;
+    position: relative;
+}
+
+.notes h1::after {
+    content: "";
+    width: 6rem;
+    height: 2px;
+    background: var(--color-third);
+    display: block;
+    margin-left: calc(100% - 7rem);
+}
+
+.notes__container {
+   padding: 3rem 0;
+}
+
+.notes__container,
+.notes__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.notes__item {
+    width: 100%;
+    height: 30rem;
+    padding: 1rem 0;
+    background: var(--color-text-white);
+    box-shadow: 4px 4px 5px 0 rgba(0,0,0,0.050),
+                -4px -4px 5px 0 rgba(0,0,0,0.050);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.notes__item h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--color-secundary);
+    margin-bottom: 1rem; 
+}
+
+.notes__item-content {
+    width: 100%;
+    overflow: auto;
+}
+
+.notes__item-content p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 1.5rem;
+    color: var(--color-text-dark) ;
+}
+
+.notes__item-button {
+    width: 80%;
+    bottom: 1.5rem;
+}
+
+.notes__item-button button {
+    width:100%;
+    padding: 1.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--color-danger);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--color-text-white);
+    margin: 1.5rem auto 0 auto;
+}
+
+.notes__priority {
+    width: 10rem;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    right: -3rem;
+    transform: rotate(45deg);
+}
+
+
+@media (min-width: 740px){
+    .notes__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        justify-content: center;
+        grid-gap: 1rem;
+    }
+}
+
+@media (min-width: 980px){
+    .notes__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

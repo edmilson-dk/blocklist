@@ -1,0 +1,57 @@
+@import url('./colors.css');
+@import url('./reset.css');
+
+.sobre {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+.sobre h1 {
+    margin-left: 10px;
+    font-size: 3rem;
+    width: 27rem;
+    color: var(--color-text-label);
+    font-weight: 600;
+    position: relative;
+}
+
+.sobre h1::after {
+    content: "";
+    width: 6rem;
+    height: 2px;
+    background: var(--color-third);
+    display: block;
+    margin-left: calc(100% - 7rem);
+}
+
+.sobre__container {
+    padding-top: 30px;
+}
+
+.sobre__content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.sobre__content p {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: initial;
+    font-weight: 400;
+    color: var(--color-text-dark);
+}
+
+@media (min-width: 740px){
+    .sobre__content {
+        max-width: 48rem;
+    }
+}
+
+@media (min-width: 981px){
+    .sobre__content {
+        max-width: 62rem;
+    }
+}
+
+

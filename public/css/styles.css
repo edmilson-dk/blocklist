@@ -1,0 +1,229 @@
+@import url('./colors.css');
+@import url('./reset.css');
+
+/* Form notas */
+.form-notes {
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-notes__counter {
+    position: absolute;
+    right: 2.5rem;
+    top: 15rem;
+    padding: 1.4rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 4px 0 rgba(0,0,0,0.20),
+                -3px -3px 4px 0 rgba(0,0,0,0.20);
+}
+
+.form-notes__counter p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.form__container {
+    width: 100%;
+}
+
+.form__container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.form-notes__actions label,
+.form-notes__options > label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-text-label);
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.form-notes__actions input,
+.form-notes__actions textarea {
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 5px 0 rgba(0,0,0,0.050),
+                -4px -4px 5px 0 rgba(0,0,0,0.050);
+    font-size: 1.5rem;
+    color: #151B2E;
+}
+
+.form-notes__actions input:focus,
+.form-notes__actions textarea:focus {
+    box-shadow: 7px 7px 5px 0 rgba(0,0,0,0.050),
+                -7px -7px 5px 0 rgba(0,0,0,0.050);
+}
+
+.form-notes__actions textarea {
+    height: 20rem;
+}
+
+.form-notes__options div {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+} 
+
+.form-notes__options div input[type="checkbox"] {
+    -webkit-appearance: none;
+    width: 6rem;
+    height: 2.5rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    position: relative;
+    transition: all .2s linear;
+}
+
+.form-notes__options div input:checked[type="checkbox"] {
+    background: ;
+}
+
+.form-notes__options div input[type="checkbox"]::before {
+    content: '';
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    transform: scale(1.1);
+    background: var(--color-danger);
+    transition: all .2s linear;
+}
+
+.form-notes__options div input:checked[type="checkbox"]::before {
+    left: 3.5rem;
+    background: var(--color-third);
+} 
+
+.form-notes__options div label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.form-notes__options div label::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.form-notes__options div #label-1::after {
+    background: var(--color-label-1);
+}
+
+.form-notes__options div #label-2::after {
+    background: var(--color-label-2);
+}
+
+.form-notes__options div #label-3::after {
+    background: var(--color-label-3);
+}
+
+.form-notes__options div #label-4::after {
+    background: var(--color-label-4);
+}
+
+.form-notes__options div #label-5::after {
+    background: var(--color-label-5);
+}
+
+.form-notes__button {
+    width: 70%;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem;
+    background: var(--color-third);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-text-white);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.form-notes__alert {
+    width: 50%;
+    height: 4rem;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--color-text-white);
+    border-radius: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+}
+
+.form-notes__alert.active {
+     animation: alert 2s linear;
+}
+
+@keyframes alert {
+    0% {
+        transform: translateY(0);
+        opacity: .2;
+    } 30% {
+        transform translateY(-20px);
+        opacity: 1;
+    } 100% {
+        transform translateY(-20px);
+        opacity: .5;
+    }
+
+}
+
+@media (min-width: 740px){
+    .form-notes__counter {
+        top: 14rem;
+    }
+
+    div.first {
+        padding-top: 3rem;
+    }
+    .form-notes__actions,
+    .form-notes__options {
+        max-width: 620px;
+    } 
+
+    .form-notes__actions textarea {
+        height: 25rem;
+    }
+
+}
+
+@media (min-width: 980px){
+    .form-notes__actions,
+    .form-notes__options {
+        max-width: 720px;
+    } 
+
+    .form-notes__actions textarea {
+        height: 30rem;
+    }
+}
+

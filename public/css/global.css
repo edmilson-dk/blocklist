@@ -1,0 +1,89 @@
+@import url('./reset.css');
+@import url('./colors.css');
+
+/* Header */
+.header {
+    background: var(--color-primary);
+    padding: 10px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: var(--color-text-white);
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Navigtion */
+.navigation {
+    width: 100%;
+    background: var(--color-third);
+}
+
+.navigation ul {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation ul li {
+    width: 30%;
+    text-align: center;
+}
+
+.navigation ul li + li {
+    border-left: 1px solid gray;
+}
+
+.navigation ul li a {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-text-white);
+}
+
+/* Footer */
+.footer {
+    padding: 1.5rem 1rem;
+    background: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer div p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-white);
+}
+
+.footer div p a {
+    color: var(--color-text-white);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.footer div ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer div ul li {
+    display: inline-block;
+}
+
+.footer div ul li a {
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.footer ul li a i {
+    font-size: 2.8rem;
+    color: var(--color-text-white);
+}

@@ -1,0 +1,17 @@
+:root {
+    --color-primary: #071A52;
+    --color-secundary: #086972;
+    --color-third: #17B978;
+    --color-danger: #EF5350;
+    --color-checkbox: #4FC3F7;
+    --color-text-label: #2B385D;
+    --color-text-dakr: #323232;
+    --color-text-gray: rgba(0,0,0,0.3);
+    --color-text-white: #fff;
+
+    --color-label-1: #AB47BC;
+    --color-label-2: #FF7043;
+    --color-label-3: #FFA726;
+    --color-label-4: #8BC34A;
+    --color-label-5: #00BCD4;
+}
