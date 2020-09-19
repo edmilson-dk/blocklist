@@ -1,5 +1,5 @@
 const $notesView = document.querySelector('[data-notes="view"]');
-const $notesRemove = document.querySelector('[data-notes="remove"]');
+const $titleNotes = document.querySelector('[data-title="title"]');
 
 function taskesNotesStoredInLocalStorage(){
     const localNotes = window.localStorage.getItem('notes');
@@ -26,7 +26,12 @@ function createHtmlView(noteItem, index){
 function initializeViewNotes(){
 
     const localNotes = taskesNotesStoredInLocalStorage();
-    
+    if (localNotes.length <= 0){
+        $titleNotes.innerHTML = `Ops!nenhuma nota criada`;
+    } else {
+        $titleNotes.innerHTML = `Notas criadas`;
+    }
+
     localNotes.forEach((note, index) => {
         $notesView.innerHTML += createHtmlView(note, index);
     });
