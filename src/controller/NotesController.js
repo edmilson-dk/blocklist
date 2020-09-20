@@ -14,7 +14,7 @@ let inputCheckedValue = {};
 const newNotes = [];
 
 function removeStandardFormEvent(){
-    $notesForm.addEventListener('submit', event => {
+    $notesForm.addEventListener('submit', event => { 
         event.preventDefault();
     }, false);
 }
@@ -53,10 +53,8 @@ function takesTheNecessaryValuesOfTheNotes(){
                 priority: inputCheckedValue.value,
             });
             $notesCounter.innerHTML = newNotes.length; 
-            storeNoteInLocalStorage(newNotes)
+            storeNoteInLocalStorage(newNotes);
             alertsTheUserIfTheNoteWasAddedOrNot(true, $notesAlert);
-            ;
-
         } else {
             alertsTheUserIfTheNoteWasAddedOrNot(false, $notesAlert);
         }
