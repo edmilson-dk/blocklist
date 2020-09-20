@@ -8,3 +8,6 @@ logo na criação do seu lembrete,ao todo são 5 prioridades diferentes com core
 Bom nesse projeto escolhi usar apenas HTML,CSS e Vanilla JavaScript,eu poderia ter criado usando Reactjs,porém escolhi por algo mas simples por se tratar de algo pequeno
 dependendo do periodo que você esteja lendo isto,eu ja terei criado o projeto em ReactJS.
 
+## Totalmente responsivo :)
+![Screenshot](https://github.com/DKSecurity99/blocklist/blob/master/Screenshot_20200919-220550_Chrome.jpg)
+
