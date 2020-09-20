@@ -37,12 +37,7 @@ function takesValueOfNotePriorityInput(){
 
 function storeNoteInLocalStorage(notes = []){
     window.localStorage.setItem('notes', JSON.stringify(notes));
-    deletesTheValuesPassedToTheEntryByTheUser(
-        $notesTitle,
-        $notesContent, 
-        $notesChecks[inputCheckedValue.index]
-    );
-}
+    }
 
 function takesTheNecessaryValuesOfTheNotes(){
     $notesButton.addEventListener('click', () => {
@@ -53,19 +48,20 @@ function takesTheNecessaryValuesOfTheNotes(){
                 priority: inputCheckedValue.value,
             });
             $notesCounter.innerHTML = newNotes.length; 
-            storeNoteInLocalStorage(newNotes);
             alertsTheUserIfTheNoteWasAddedOrNot(true, $notesAlert);
         } else {
             alertsTheUserIfTheNoteWasAddedOrNot(false, $notesAlert);
         }
+        storeNoteInLocalStorage(newNotes);
+        deletesTheValuesPassedToTheEntryByTheUser(
+            $notesTitle,
+            $notesContent, 
+            $notesChecks[inputCheckedValue.index]
+        );
     })
 }
 
 function initializeBanknoteControlProcess(){
-    takesValueOfNotePriorityInput();
-    takesTheNecessaryValuesOfTheNotes();
-    removeStandardFormEvent();
-
     window.addEventListener('load', () => {
         const localNotes = window.localStorage.getItem('notes');
         const oldNotes = JSON.parse(localNotes);
@@ -76,6 +72,10 @@ function initializeBanknoteControlProcess(){
 
         $notesCounter.innerHTML = newNotes.length;
     });
+
+    takesValueOfNotePriorityInput();
+    takesTheNecessaryValuesOfTheNotes();
+    removeStandardFormEvent();
 }
 
 export default initializeBanknoteControlProcess;
