@@ -198,6 +198,9 @@
 }
 
 @media (min-width: 740px){
+    form-notes__alert {
+        width: 50%;
+    }
     .form-notes__counter {
         top: 14rem;
     }
